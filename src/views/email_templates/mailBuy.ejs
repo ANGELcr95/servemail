@@ -1,0 +1,88 @@
+<html><body>
+    <table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; background-color: white; padding:50px; font-size:14px; font-family: tahoma,geneva,sans-serif;" width="60%; border-top: #fd0276 solid 20px; top center no-repeat;
+    background-size: cover;">
+        <tbody>
+            <tr>
+                <td align="center" style="padding:10px 0; background-color: #1bb1ecb9;">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; max-width:600px; min-width:450px;">
+                        <tbody>
+                            <tr>
+                                <td align="center">
+                                    <img  style="margin: center; margin: 5px auto 5px;display: block;max-width:150px" src="https://www.tecnoideas20.com/wp-content/uploads/2021/06/logo-google-transparent.png">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            <tr>
+            <tr >
+                <td height="30" align="center" style="padding:10px 0;">
+                    <h3 style="margin: 10px auto;">Tu orden esta en camino</h3>
+                    <img  style="margin: center; margin: 5px auto 5px;display: block;max-width:80px" src="https://cdn-icons-png.flaticon.com/512/181/181578.png">
+                    <p style="width: 80%; margin: 20px auto;">¡Gracias por comprar en nuestra tienda online! 
+                        Estamos muy contentos de que hayas encontrado lo que estabas buscando. Trabajamos para que siempre obtengas la máxima satisfacción 
+                        <br>
+                        <br>
+                        Tus amigos de la tienda <b> Distribuidora Negociemos. </b></p>
+                </td>
+            </tr>
+                <td align="center" style="padding:20px;background-color: #1bb1ecb9;">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; background-color:#f9f9f9; max-width:600px; min-width:450px;">
+                    <tbody>
+                        <tr>
+                            <td  style="line-height:18px; ">
+                            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; width:100%; background-color: #1bb1ecb9;">
+                            <tbody>
+                                    <tr>
+                                        <td align="center" style="color: white;text-align:left; padding: 20px;"><span style="font-size:14px; font-family: tahoma,geneva,sans-serif; color: white;">
+                                        <div class="cliente" style="border-radius: 1rem; background-color:#1bb1ecb9;padding: 0.5rem;">
+                                            <h3 style="text-align: center; font-size: 20px; color: white;"> <%= contacto.toUpperCase() %> </h3>
+                                            <p style="color: white;">Tus articulo(s):</p>
+                                           <% for(let i = 0 ;  i < items.length ; i++)  { %>
+                                              <ul>
+                                                <li> <%= items[i].item_nombre %></li>
+                                             </ul>
+                                            <% } %> 
+                                         <p style="color: white;">Los articulos que ordenaste llegaran a la siguiente dirección <b><%= direccion %></b> en la ciudad de <b><%= ciudad_corres_desc %></b> <br> <br>
+                                            Si presenta retraso en la entrega no dudes en comunicarte <b> (2) 4896900</b></p><br>
+  
+                                            <p>EL pago se realizara en 
+                                            <% if(forma_pago_id == 1){  %>
+                                                <b>Tarjeta de credito PSE</b>
+                                            <% } %>
+                                            <% if(forma_pago_id == 2){  %>
+                                                <b>Pago contraentrega</b>
+                                            <% } %>
+                                            <% if(forma_pago_id == 3){  %>
+                                                <b>Transferencia bancaria</b>
+                                            <% } %> por un valor de: </p> 
+                                            <b style="color: rgb(25, 112, 62); font-size: 1.5rem;"><%= valor_total %> COP</b> 
+  
+                                        </div>
+                                        
+                                        <br>
+                                        <br>
+                                        <a href="" target="_blank" style="text-align:center; color: rgb(40, 71, 180); font-size: 20px;"><b style="text-align: center;">Distribuidora negociemos</b></a>
+                                        <p style="text-align: center; color: rgb(11, 21, 56); font-size: 10px;">Usted está recibiendo este correo electrónico por estar por compra de nuestros pruductos
+                                            Distribuidora Negociemos no solicita datos confidenciales como: claves o PIN, fechas de vencimiento a través de correo electrónico, mensajes de texto ni llamadas telefónicas, si esto llegara a ocurrir le solicitamos nos lo notifique enviándonos la información al correo distribuidora_negociemos@example.com.co
+                                        </p>
+  
+                                        <div style="text-align: center;">
+                                            <a href="https://www.facebook.com/negociemosdistribuidora/"><img  style=" max-width:30px" src="https://cdn-icons-png.flaticon.com/512/20/20673.png"></a>
+                                            <a href="https://www.instagram.com/distribuidoranegociemos/"> <img  style="margin-left: 1rem;max-width:30px" src="https://cdn-icons-png.flaticon.com/512/87/87390.png"></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    </tr>
+                </tbody>
+                </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </body>
+</html>
+  
