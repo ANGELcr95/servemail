@@ -37,12 +37,12 @@ app.post("/enviar-correo", async(req, res, next) => {
 app.post("/auth-login", async(req, res, next) => {
     try{
         const { to ,token} = req.body;
-        const urlToken = token.split(" ")
+        const urlToken = token.split("//")
 
         console.log(urlToken[1])
 
         const scrt_var = urlToken[1];
-        const strLink = "http://localhost:3001/#?"+ scrt_var;
+        const strLink = "http://localhost:3000/#/verificacion/"+  scrt_var;
         console.log(strLink)
         const pathTemplate = path.resolve("src", "views/email_templates", "authLogin.ejs");
         const template = await ejs.renderFile(pathTemplate, {link: strLink});
